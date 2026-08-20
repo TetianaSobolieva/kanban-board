@@ -1,6 +1,6 @@
-# Task Management Boards
+# Kanban Boards
 
-An anonymous, Trello-style task board app. Anyone can create a board, share its ID, and manage
+An anonymous, Trello-style kanban board app. Anyone can create a board, share its ID, and manage
 cards across **To Do → In Progress → Done** with drag-and-drop. No login required.
 
 ## Tech stack
@@ -20,7 +20,7 @@ cards across **To Do → In Progress → Done** with drag-and-drop. No login req
 ## Project structure
 
 ```
-task-boards/
+kanban-boards/
 ├── backend/            # Express + TypeORM API
 │   ├── src/
 │   │   ├── entities/       # Board, Card TypeORM entities
@@ -78,7 +78,7 @@ docker compose up --build
 
 - Frontend: http://localhost:5173
 - Backend health check: http://localhost:4000/health
-- Postgres: localhost:5432 (user/pass `postgres` / `postgres`, db `task_boards`)
+- Postgres: localhost:5432 (user/pass `postgres` / `postgres`, db `kanban_boards`)
 
 ### Option B — run each app manually
 
