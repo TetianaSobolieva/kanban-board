@@ -1,0 +1,36 @@
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 24px 32px;
+  overflow-x: auto;
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stateTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0;
+}
+
+.stateText {
+  color: var(--color-ink-soft);
+  font-size: 14px;
+  max-width: 360px;
+}

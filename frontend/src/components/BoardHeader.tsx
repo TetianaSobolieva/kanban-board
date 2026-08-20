@@ -28,6 +28,7 @@ export default function BoardHeader({ boardId, name, onRename, onDelete }: Props
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
+      // clipboard API unavailable - silently ignore
     }
   };
 
