@@ -1,5 +1,5 @@
 {
-  "name": "task-boards-backend",
+  "name": "task-board-backend",
   "version": "1.0.0",
   "description": "Task Management Boards - Express + TypeScript + PostgreSQL backend",
   "main": "dist/server.js",

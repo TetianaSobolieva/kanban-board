@@ -14,6 +14,8 @@ import {
 } from '../api/apiSlice';
 import { Card, ColumnType, COLUMN_ORDER, ReorderItem } from '../types';
 import BoardHeader from '../components/BoardHeader';
+import Column from '../components/Column';
+import CardModal from '../components/CardModal';
 import styles from './BoardPage.module.css';
 
 type ModalState = { mode: 'create'; column: ColumnType } | { mode: 'edit'; card: Card } | null;
@@ -113,7 +115,48 @@ export default function BoardPage() {
         }}
       />
 
+      <DragDropContext onDragEnd={onDragEnd}>
+        <div className={styles.board}>
+          {COLUMN_ORDER.map((col) => (
+            <Column
+              key={col}
+              column={col}
+              cards={board.columns[col]}
+              onOpenCard={(card) => setModal({ mode: 'edit', card })}
+              onAddCard={(column) => setModal({ mode: 'create', column })}
+            />
+          ))}
+        </div>
+      </DragDropContext>
 
+      {modal?.mode === 'create' && (
+        <CardModal
+          mode="create"
+          initialColumn={modal.column}
+          onClose={() => setModal(null)}
+          onSave={(data) => {
+            createCard({ boardId, payload: data });
+            setModal(null);
+          }}
+        />
+      )}
+
+      {modal?.mode === 'edit' && (
+        <CardModal
+          mode="edit"
+          initialColumn={modal.card.column}
+          card={modal.card}
+          onClose={() => setModal(null)}
+          onSave={(data) => {
+            updateCard({ boardId, cardId: modal.card.id, payload: data });
+            setModal(null);
+          }}
+          onDelete={() => {
+            deleteCard({ boardId, cardId: modal.card.id });
+            setModal(null);
+          }}
+        />
+      )}
     </div>
   );
 }
