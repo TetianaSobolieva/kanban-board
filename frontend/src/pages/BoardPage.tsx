@@ -73,7 +73,6 @@ export default function BoardPage() {
       );
 
       reorderCards({ boardId, cards: changed }).catch(() => {
-        // reverts automatically on next refetch; a toast could surface this in a fuller build
       });
     },
     [board, boardId, dispatch, reorderCards],
