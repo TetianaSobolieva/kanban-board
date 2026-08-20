@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 32px;
+  background: var(--color-ink);
+  color: #fff;
+}
+
+.left {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 6px;
+  max-width: 40vw;
+}
+
+.name:hover,
+.name:focus {
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.idBadge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.idBadge:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.homeLink {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.homeLink:hover {
+  color: #fff;
+}
