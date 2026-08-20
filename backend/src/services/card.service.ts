@@ -2,7 +2,7 @@ import { AppDataSource } from '../data-source';
 import { Board } from '../entities/Board';
 import { Card } from '../entities/Card';
 import { NotFoundError } from '../utils/AppError';
-import { CreateCardInput, ReorderCardsInput, UpdateCardInput } from '../validator/card.validator';
+import { CreateCardInput, ReorderCardsInput, UpdateCardInput } from '../validators/card.validator';
 
 const cardRepo = () => AppDataSource.getRepository(Card);
 const boardRepo = () => AppDataSource.getRepository(Board);

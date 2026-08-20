@@ -4,7 +4,7 @@ import { Board } from '../entities/Board';
 import { Card } from '../entities/Card';
 import { ColumnType, COLUMN_ORDER } from '../entities/ColumnType';
 import { NotFoundError } from '../utils/AppError';
-import { CreateBoardInput, UpdateBoardInput } from '../validator/board.validator';
+import { CreateBoardInput, UpdateBoardInput } from '../validators/board.validator';
 
 const boardRepo = () => AppDataSource.getRepository(Board);
 const cardRepo = () => AppDataSource.getRepository(Card);
