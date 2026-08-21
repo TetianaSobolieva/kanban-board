@@ -137,12 +137,3 @@ env vars at any disposable database.
 - `.github/workflows/ci.yml` runs ESLint, Prettier, the test suite, and a production build for
   both apps on every push/PR to `main`.
 
-## Design choices worth calling out
-
-- **Optimistic drag & drop**: dropping a card updates the RTK Query cache immediately (so the
-  UI feels instant) and fires a single bulk `reorder` request in the background instead of one
-  request per moved card.
-- **Anonymous, ID-based access**: a board's nanoid doubles as its access token — no auth,
-  matching the "anonymous visitor" requirement. Anyone with the ID can view/edit it.
-- **Validation on both ends**: Zod schemas guard the API; the same shape of checks (required
-  title, length limits) is mirrored in the UI so invalid input never reaches the network.
