@@ -3,6 +3,20 @@
 An anonymous, Trello-style kanban board app. Anyone can create a board, share its ID, and manage
 cards across **To Do → In Progress → Done** with drag-and-drop. No login required.
 
+## Demo
+ 
+🔗 **Live app:** [https://kanban-board-1-vmpj.onrender.com/](https://kanban-board-1-vmpj.onrender.com/)
+🔗 **API health check:** [https://kanban-board-km6q.onrender.com/health](https://kanban-board-km6q.onrender.com/health)
+
+> Hosted on Render's free tier — the backend spins down after 15 minutes of inactivity, so the
+> first request after a pause can take 30–50s while it wakes up.
+ 
+Quick walkthrough:
+1. Open the live app and create a board (or paste an existing board ID to open it).
+2. Add a few cards to **To Do**.
+3. Drag cards between **To Do → In Progress → Done**, or reorder them within a column.
+4. Copy the board ID from the header to share the board with someone else.
+
 ## Tech stack
 
 | Layer      | Choice                                                                 |
